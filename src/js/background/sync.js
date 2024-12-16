@@ -1137,8 +1137,26 @@ const prepareSimklSyncHistAddandRatings = (
     shows: smkShows,
   } = smkLibraryItems;
 
+  // For brand new accounts, these would be empty
+  if (!smkAnimelist) {
+    consolewarn("simkl anime list is empty", smkAnimelist)();
+    smkAnimelist = [];
+  }
+  if (!smkShows) {
+    consolewarn("simkl shows list is empty", smkShows)();
+    smkShows = [];
+  }
+  if (!smkMovies) {
+    consolewarn("simkl movies list is empty", smkMovies)();
+    smkMovies = [];
+  }
+
+  /*
+   * anime and shows are same for plex TODO combine
   let smkTempAnimeNShows = smkAnimelist;
   smkTempAnimeNShows = smkTempAnimeNShows.concat(smkShows);
+  */
+  //if (smkTempAnimeNShows.length == 0) return;
 
   let simklMoviesLut = {},
     simklShowsLut = {};
@@ -1278,7 +1296,7 @@ const plexDiscover = async () => {
 
 const zipSimklLibrary = async () => {
   // create a zip file with all the simkl library entries
-  if (!JSZip) return;
+  if (typeof JSZip === "undefined") return;
   let webm = await (
     await fetch(chrome.runtime.getURL("assets/sample.webm"))
   ).blob();

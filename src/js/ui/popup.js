@@ -172,6 +172,7 @@ const updateBackgroundURL = async (
       portrait: true,
     }),
   });
+  uiHandleBackgroundImg();
 };
 
 const uiHandleBackgroundImg = () => {
@@ -325,7 +326,10 @@ const onLoad = async () => {
     if (!!plexInstanceUrl) {
       urlInput.value = plexInstanceUrl;
       validateInputUrl(urlInput.value);
-      // updateBackgroundURL(plexInstanceUrl, , 2681);
+      // TODO get latest synced item and by default some random image from simkl if nothing synced yet
+      // https://api.simkl.com/users/recently-watched-background/979451?client_id=7bbc0f591119db644881b2467b241646ff1306cb33b421fbc9476401bbc4048b
+      // could be null for fresh users
+      updateBackgroundURL(plexInstanceUrl, "128", "whGAbZQ4q8DxNss-9Vw4");
     }
     if (!!syncPeriod) {
       durationInput.value = syncPeriod;

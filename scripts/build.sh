@@ -24,9 +24,10 @@ fi
 # sed -i -r "s/const devLoggerSetup=\(.*\};/const devloggerSetup=_=>_=>\{\}\;/g" dist/js/common.js
 
 # prevent tests from bundling
-rm -rf dist/tests
-rm -f dist/js/vendor/qunit-2.23.1.js
-rm -f dist/css/vendor/qunit-2.18.2-dark.css
+# TODO if PROD remove these
+#rm -rf dist/tests
+#rm -f dist/js/vendor/qunit-2.23.1.js
+#rm -f dist/css/vendor/qunit-2.18.2-dark.css
 
 minify -r -o dist/ src
 

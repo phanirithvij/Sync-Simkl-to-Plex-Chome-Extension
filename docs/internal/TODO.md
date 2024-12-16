@@ -41,11 +41,24 @@
   - [ ] Install and uninstall flow capture videos in automated testing!
   - https://playwright.dev/docs/videos
   - https://playwright.dev/docs/chrome-extensions
+- [ ] background image of last watched in full page
+  - by default show same thing as simkl bg
+  - https://api.simkl.com/users/recently-watched-background/${simkl-userid}?client_id=***
+- [ ] summary after sync done
+  - needed
+- [x] FUTURE: view more page after sync, to view sync history
+  - saved locally
+  - for now @masyk said unnecessary maybe for future
 
 Bugs
 
 - [x] simkl connect flow is broken!!
 - [x] some request repeated too many times thing
+- [ ] plex first time login requires a second login
+- [ ] timer is wrong, reproduce via simply waiting
+  - set to 0.003
+- [ ] css linear gradient with background image
+- [ ] scrollbar eliminate
 
 #### `@masyk`
 

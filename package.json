@@ -11,8 +11,8 @@
     "build:win32": "pwsh.exe .\\scripts\\build.ps1 && npm run build:pack",
     "build:pack": "web-ext build -s dist -a artifacts/chrome -n {name}-{version}-chrome.zip --overwrite-dest",
     "test": "exitzero npm run test:patchqunit && npm run test:puppeteer",
-    "test:puppeteer": "node src/tests/puppet.js",
-    "test:patchqunit": "echo $PUPPETEER_EXEC_PATH && patch -f node_modules/node-qunit-puppeteer/index.js src/tests/node-qunit.patch"
+    "test:puppeteer": "node src/tests/ux/puppet.js",
+    "test:patchqunit": "echo $PUPPETEER_EXEC_PATH && patch -f node_modules/node-qunit-puppeteer/index.js src/tests/ux/node-qunit.patch"
   },
   "webExt": {
     "sourceDir": "src/"

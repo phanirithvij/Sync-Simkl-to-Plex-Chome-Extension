@@ -15,7 +15,7 @@ const launchNodeQunit = async (qunitArgs) => {
 };
 
 (async () => {
-  const pathToExtension = require("path").join(__dirname, "../");
+  const pathToExtension = require("path").join(__dirname, "../../");
   console.log("[INFO] Loading extension " + pathToExtension);
   const qunitArgs = {
     targetUrl: null,
@@ -45,10 +45,10 @@ const launchNodeQunit = async (qunitArgs) => {
 
   const browser = await puppeteer.launch(puppeteerConfig);
   const extId = "edjlcleicmcdpapdcobooenkchaehdib";
-  qunitArgs.targetUrl = `chrome-extension://${extId}/tests/index.html`;
+  qunitArgs.targetUrl = `chrome-extension://${extId}/tests/ux/index.html`;
   launchNodeQunit(qunitArgs);
   const page = await browser.newPage();
-  await page.goto(`chrome-extension://${extId}/tests/index.html`);
+  await page.goto(`chrome-extension://${extId}/tests/ux/index.html`);
   // https://stackoverflow.com/a/49959766
   await page.waitForFunction(
     () =>
