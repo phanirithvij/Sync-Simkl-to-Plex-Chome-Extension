@@ -200,6 +200,7 @@ body:not(.sync-enabled) sync-desc-line-1::before {
 
 body.custom-sync-period sync-buttons {
   max-width: 330px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -213,7 +214,7 @@ sync-buttons-button {
   border-radius: 25px;
   padding: 14px;
   padding-top: 9px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   cursor: pointer;
   transition: transform 0.2s;
   -webkit-transition: transform 0.2s;
@@ -250,9 +251,9 @@ sync-buttons-button.Plex {
   color: var(--white-color);
 }
 
-body.custom-sync-period sync-buttons-button.Plex {
+/*body.custom-sync-period sync-buttons-button.Plex {
   margin-bottom: 20px !important;
-}
+}*/
 
 .connected-plex sync-buttons-button.Plex {
   border: var(--plex-color) 2px solid;
