@@ -49,13 +49,16 @@
 - [x] FUTURE: view more page after sync, to view sync history
   - saved locally
   - for now @masyk said unnecessary maybe for future
+- [ ] anime sync, requires backend changes
+- [ ] firefox mv3
+- [ ] docker, playwright tests
 
 Bugs
 
 - [x] simkl connect flow is broken!!
 - [x] some request repeated too many times thing
 - [ ] plex first time login requires a second login
-- [ ] timer is wrong, reproduce via simply waiting
+- [x] timer is wrong, reproduce via simply waiting
   - set to 0.003
 - [ ] css linear gradient with background image
 - [ ] scrollbar eliminate

@@ -9,6 +9,7 @@ self.addEventListener("install", () => {
 });
 
 // https://www.npmjs.com/package/txml/v/5.1.1
+// TODO find a way to do it via pnpm
 importScripts("../vendor/txml@5.1.1.min.js");
 
 // Global state

@@ -42,6 +42,7 @@
     "contextMenus",
     "webRequest",
     "alarms",
-    "storage"
+    "storage",
+    "offscreen"
   ]
 }
